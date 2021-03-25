@@ -87,11 +87,24 @@ body{
 	background: #212529;
 	border-bottom: 2px solid #f00;
 }
+.menubar{
+	font-size: 22px;
+	color: #f00;
+	cursor: pointer;
+	z-index: 10;
+	display: none;
+}
 /*Banner Area CSS*/
 .banner{
 }
 .carousel-inner{
 	height: 100vh;
+}
+.carousel-item{
+	height: 100%;
+}
+.carousel-item img{
+	height: 100%;
 }
 .arrow i {
     width: 50px;
@@ -603,4 +616,41 @@ body{
 .foot-item ul li a:hover{
 	color: #00a01d;
 	text-decoration: underline;
+}
+/*Responsive Area CSS*/
+@media(max-width: 768px){
+	.header-top ul{
+		justify-content: center;
+	}
+	.menubar{
+		display: block;
+	}
+	.menu{
+		display: none;
+	}
+	.menu-list{
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 50%;
+		text-align: center;
+		background: #000;
+		height: 100vh;
+		z-index: 3;
+		padding-top: 100px;
+	}
+	.menu-list li{}
+	.menu-list li a{
+		color: #fff;
+		display: inline-block;
+	}
+	.menu-list li a:hover,
+	.menu-list li a.active{
+		background: none;
+	}
+	.contact form input{
+		width: 300px;
+		margin-bottom: 20px;
+	}
 }
